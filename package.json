@@ -1,0 +1,56 @@
+{
+    "name": "env-spoiler",
+    "displayName": "Env Spoiler",
+    "description": "Masks sensitive values in .env files to prevent accidental exposure.",
+    "version": "0.0.1",
+    "publisher": "hqnseung",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/hqnseung/env-spoiler"
+    },
+    "engines": {
+        "vscode": "^1.96.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onStartupFinished",
+        "onCommand:envSpoiler.toggle",
+        "onCommand:envSpoiler.hideAll"
+    ],
+    "main": "./dist/extension.js",
+    "contributes": {
+        "commands": [
+            {
+                "command": "envSpoiler.toggle",
+                "title": "Env Spoiler: Toggle Masking"
+            },
+            {
+                "command": "envSpoiler.hideAll",
+                "title": "Env Spoiler: Hide All"
+            }
+        ],
+        "configuration": {
+            "title": "Env Spoiler",
+            "properties": {
+                "envSpoiler.enable": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Enable masking of .env values."
+                }
+            }
+        }
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run package",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "package": "tsc -p ./"
+    },
+    "devDependencies": {
+        "@types/vscode": "^1.96.0",
+        "@types/node": "20.x",
+        "typescript": "^5.7.2"
+    }
+}
