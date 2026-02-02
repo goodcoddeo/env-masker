@@ -1,12 +1,12 @@
 # Env Masker
 
-A VS Code extension that specifically masks values in `.env` files to prevent accidental exposure during screen sharing or streaming.
+A VS Code extension that specifically masks values in `.env`, `config.json` files to prevent accidental exposure during screen sharing or streaming.
 
 <img width="583" height="202" alt="image" src="https://github.com/user-attachments/assets/8964f857-ef42-45d3-a531-f3f42fac7795" />
 
 ## Features
 
-- **Automatic Masking**: Automatically detects `.env` files and masks values after the `=` sign.
+- **Automatic Masking**: Automatically detects `.env`, `config.json` files and masks values after the `=` sign.
 - **Discord-Style Spoilers**: 
   - Values are hidden by default.
   - **Click to Reveal**: Click on a masked value to reveal it.
@@ -15,12 +15,12 @@ A VS Code extension that specifically masks values in `.env` files to prevent ac
 
 ## Usage
 
-- **Activate**: Open any `.env`, `.properties`, or `plaintext` file that looks like an environment file.
+- **Activate**: Open any `.env`, `config.json`, `.properties`, or `plaintext` file that looks like an environment file.
 - **Toggle**: Use `Ctrl+Shift+P` -> `Env Masker: Toggle Masking`.
 - **Hide All**: Use `Ctrl+Shift+P` -> `Env Masker: Hide All` to re-mask revealed values.
 
 ## Installation
 
-1. Download the `.vsix` file from [here](https://github.com/hqnseung/env-masker/releases/tag/V0.0.1)
+1. Download the `.vsix` file from [here](https://github.com/goodcoddeo/env-masker/releases/tag/V0.0.1)
 2. In VS Code, go to Extensions -> `...` (Views and More Actions) -> `Install from VSIX...`
 3. Select the file.
