@@ -33,5 +33,3 @@ https://github.com/hqnseung/env-masker
 원본 프로젝트는 `https://github.com/hqnseung/env-masker`에서 확인할 수 있습니다.
 
 이 프로젝트의 라이센스 또한 Mit License를 따르고 있습니다.
-
-asdf
