@@ -3,10 +3,10 @@
     "displayName": "Env Masker",
     "description": "Masks sensitive values in .env files to prevent accidental exposure.",
     "version": "0.0.2",
-    "publisher": "hqnseung",
+    "publisher": "goodcoddeo",
     "repository": {
         "type": "git",
-        "url": "https://github.com/hqnseung/env-masker"
+        "url": "https://github.com/goodcoddeo/env-masker"
     },
     "engines": {
         "vscode": "^1.96.0"

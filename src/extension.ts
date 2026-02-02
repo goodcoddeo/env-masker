@@ -63,7 +63,6 @@ export function activate(context: vscode.ExtensionContext) {
             doc.languageId === 'dotenv') {
             fileType = 'env';
         } else if (fileName.endsWith('.json')) {
-            // Target config.json or similar patterns like my.config.json
             fileType = 'json';
         }
 
