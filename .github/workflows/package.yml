@@ -1,0 +1,37 @@
+name: Build and Package Extension
+
+on:
+  push:
+    branches: [ "main", "master" ]
+  pull_request:
+    branches: [ "main", "master" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: 20
+
+    - name: Install dependencies
+      run: npm ci
+
+    - name: Compile
+      run: npm run compile
+
+    - name: Package Extension
+      # --no-dependencies flag might be needed if devDependencies are not pruned correctly, 
+      # but standard 'package' usually works. We use npx to use the latest vsce.
+      run: npx @vscode/vsce package --out env-masker.vsix
+
+    - name: Upload VSIX Artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: env-masker-vsix
+        path: env-masker.vsix
